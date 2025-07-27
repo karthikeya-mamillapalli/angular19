@@ -9,3 +9,20 @@
        <input matInput [(ngModel)]="message"/>
 </mat-form-field>
 <p>{{message}}</p>
+
+
+<!-- two way data binding  with signals -->
+<div style="display: flex;justify-content: center;">
+    <p style="font-size: 25px; color: purple;"></p>
+    <p>Two way data Binding  with signals </p> 
+</div>
+
+<mat-form-field>
+    <mat-label>
+     Enter something baby
+    </mat-label>
+       <input matInput [value]="userName()"
+       (input)="userName.set($any($event.target).value)"/>
+</mat-form-field>
+<p>{{userName()}}</p>
+
