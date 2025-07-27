@@ -1,0 +1,13 @@
+<!-- page should be rendered to use templare ref-->
+<div style="display: flex;justify-content: center;">
+    <p style="font-size: 25px; color: purple;"></p>
+    <p>temp ref variables</p> 
+</div>
+<mat-form-field>
+    <mat-label>
+        Enter something
+    </mat-label>
+    <input matInput #inputvalue/>
+</mat-form-field>
+<button mat-raised-button (click)="getInputValue(inputvalue.value)">clickMe</button>
+<p>{{message}}</p>

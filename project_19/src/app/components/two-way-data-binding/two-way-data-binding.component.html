@@ -1,0 +1,11 @@
+<div style="display: flex;justify-content: center;">
+    <p style="font-size: 25px; color: purple;"></p>
+    <p>Two way data Binding (class <=> view) 1)view-class 2)class-view</p> 
+</div>
+<mat-form-field>
+    <mat-label>
+     Enter something baby
+    </mat-label>
+       <input matInput [(ngModel)]="message"/>
+</mat-form-field>
+<p>{{message}}</p>

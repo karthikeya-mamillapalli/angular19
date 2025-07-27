@@ -1,0 +1,137 @@
+<div style="display: flex;justify-content: center;">
+    <p style="font-size: 25px; color: purple;"></p>
+    <p>event binding (view-class)</p> 
+</div>
+<!--click event -->
+<button mat-raised-button color="warn"  (click)="getName()" >
+    Display Name
+</button>
+<button mat-raised-button color="primary"  (click)="clearName()" >
+clear Name
+</button>
+<p style="margin: 20px auto;">
+    name:{{name}}
+</p>
+
+<!--double click event-->
+<button mat-raised-button color="accent" (dblclick)="getDoubleClickName()">
+    Doubleclick
+</button>
+<p>Action:{{result}}</p>
+
+
+<!--input event-->
+<mat-form-field apperance="outline">
+    <mat-label>Input event</mat-label>
+    <input matInput (input)="onInput($event)" />
+</mat-form-field>
+<!-- 
+<mat-form-field  appearance="outline">
+    <mat-label>Input event</mat-label>
+    <input matInput (input)="onInputwithvalue($event.target.value)"/>
+</mat-form-field> -->
+<p>
+    Inputvalue:
+    {{inputValue}}
+</p>
+
+<!--change Eventt select-->
+<mat-form-field appearance="outline">
+    <mat-label>select any one of the fruits</mat-label>
+    <mat-select (selectionChange)="fruitsChange($event)">
+        <mat-option value="bannan">bannan</mat-option>
+        <mat-option value="apple">apple</mat-option>
+        <mat-option value="mango">mango</mat-option>
+    </mat-select>
+</mat-form-field>
+<p>selectedValue:{{selectedValue}}</p>
+
+<!--checkbox -->
+<mat-checkbox (change)="checkBoxChange($event)">
+    Accept me as your partner
+</mat-checkbox>
+<p>checkboxchecked:{{ischecked}}</p>
+
+
+<!--radio button-->
+<mat-radio-group (change)="onRadioChange($event)">
+    <mat-radio-button value="Male" checked>
+        Male
+    </mat-radio-button >
+       <mat-radio-button value="Female">
+       Female
+    </mat-radio-button>
+          <mat-radio-button value="Shemale">
+       Shemale
+    </mat-radio-button>
+</mat-radio-group>
+<p>selectedGender:{{selectedGender}}</p>
+
+<!-- key board events - keyup-->
+ <mat-form-field>
+    <mat-label>Enter key up event</mat-label>
+    <input type="text" matInput (keyup)=" onKeyUp($event)"/>
+ </mat-form-field>
+ <p>keyup value:{{keyup}}</p>
+
+
+ <!-- key board events - keydown -->
+ <mat-form-field>
+    <mat-label>Enter keydown</mat-label>
+    <input type="text" matInput (keyup)=" onKeyDown($event)"/>
+ </mat-form-field>
+ <p>keyDown value:{{keydown}}</p>
+
+
+ <!-- key board events - Enter -->
+ <mat-form-field>
+    <mat-label>Enter Event</mat-label>
+    <input type="text" matInput (keyup.enter)="onKeyEnter($event)"/>
+ </mat-form-field>
+ <p>keyDown value:{{keyenter}}</p>
+
+ <!--Focus and blur event-->
+  <mat-form-field>
+    <mat-label>Enter focus</mat-label>
+    <input type="text" matInput (focus)="onfocus()" (blur)="onBlur()"/>
+ </mat-form-field>
+ <p>focus value:{{keyfocus}}</p>
+
+ <!-- mouse over mouse enter mouse leve-->
+  <div 
+  style="disply:flex;
+  justify-content: center;
+  height: 50px;
+  background-color: bisque;
+  "
+  (mouseover)="onMouseOver()"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+  >
+hover/enter
+  </div>
+
+  <!--Rightclick context -->
+  <div
+    style="disply:flex;
+  justify-content: center;" (contextmenu)="contect($event)"
+  >
+  <p style="width: 25px; height: 50px; background-color: rgb(100, 68, 15); 
+  cursor: pointer;color: blue;"> right click on me 
+  </p>
+  </div>
+  <p>
+    contextmenu:{{contextvalue}}
+  </p>
+
+  <!--Drag and drop events-->
+  <div id="dragItem"
+    style="display: flex;
+    justify-content: center;
+    align-items: center; height: 50px;width: 120px;
+    color :#ffff;
+    cursor:grab">Drag me
+    </div>
+
+
+
