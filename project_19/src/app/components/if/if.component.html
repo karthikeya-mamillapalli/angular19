@@ -1,0 +1,26 @@
+<div style="display: flex;justify-content: center;">
+    <p style="font-size: 25px; color: purple;"></p>
+    <p>If statement</p> 
+</div>
+<div class="container">
+    @if(!isLoggedIn){
+        <p>
+  hi baby 
+        </p>
+    }
+    @else {
+       <p>please login first</p> 
+    }
+    <!--alias never works
+    -->
+    <!-- @if (user as u) {
+        <p>hello {{u.name}}}</p>
+    } -->
+@if(user){
+    hello {{user.name}}
+}
+@else {
+    no use baby
+}
+
+</div>
