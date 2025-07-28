@@ -1,0 +1,61 @@
+<div style="display: flex;justify-content: center;">
+    <p style="font-size: 25px; color: purple;"></p>
+    <p>Switch component</p>
+</div>
+
+<div class="container">
+    <mat-form-field appearance="outline">
+        <mat-label>Enter value from drop down</mat-label>
+        <mat-select [(ngModel)]="userRole">
+            <mat-option value="Admin">Admin</mat-option>
+            <mat-option value="User">User</mat-option>
+            <mat-option value="Guest">Guest</mat-option>
+            <mat-option value="Unknown">Unknown</mat-option>
+        </mat-select>
+    </mat-form-field>
+    @switch(userRole){
+    @case("Admin"){
+    <p>welcome admin</p>
+    }
+    @case("User"){
+    <p>welcome User</p>
+    }
+    @case("Guest"){
+    <p>welcome Guest</p>
+    }
+    @default(){
+    <p>Unknown</p>
+    }
+    }
+</div>
+<!-- using signals-->
+
+<div style="display: flex;justify-content: center;">
+    <p style="font-size: 25px; color: purple;"></p>
+    <p>Switch component using signals</p>
+</div>
+<div class="container">
+    <mat-form-field appearance="outline">
+        <mat-label>Enter value from drop down using signals</mat-label>
+        <mat-select [value]="userSignals()" (selectionChange)="userSignals.set($event.value)">
+            <mat-option value="Admin">Admin</mat-option>
+            <mat-option value="User">User</mat-option>
+            <mat-option value="Guest">Guest</mat-option>
+            <mat-option value="Unknown">Unknown</mat-option>
+        </mat-select>
+    </mat-form-field>
+    @switch(userSignals()){
+    @case("Admin"){
+    <p>welcome admin</p>
+    }
+    @case("User"){
+    <p>welcome User</p>
+    }
+    @case("Guest"){
+    <p>welcome Guest</p>
+    }
+    @default{
+    <p>Unknown</p>
+    }
+    }
+</div>
