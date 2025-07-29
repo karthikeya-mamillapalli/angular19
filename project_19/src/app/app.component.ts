@@ -11,10 +11,12 @@ import { TwoWayDataBindingComponent } from "./components/two-way-data-binding/tw
 import { IfComponent } from "./components/if/if.component";
 import { SwitchComponent } from "./components/switch/switch.component";
 import { ForComponent } from "./components/for/for.component";
+import { SenderComponent } from "./components/sender/sender.component";
+import { ReceiverComponent } from "./components/receiver/receiver.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TestComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent, TwoWayDataBindingComponent, IfComponent, SwitchComponent, ForComponent],
+  imports: [RouterOutlet, TestComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent, TwoWayDataBindingComponent, IfComponent, SwitchComponent, ForComponent, SenderComponent, ReceiverComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,0 +1,25 @@
+
+<div style="display: flex;justify-content: center;">
+    <p style="font-size: 25px; color: purple;"></p>
+    <p>component communication</p> 
+</div>
+
+<div class="container">
+    <div class="parent">
+        <div class="p-3">
+          <h4><u>parent component</u></h4>
+          <h5>Incoming message</h5>
+          <h4>{{incomingMsg}}</h4>
+          <h4>Message from child here..</h4>          
+        </div>
+    
+    <div class="child">
+        <div class="p-3">
+            <h4>child component container</h4>
+            <app-receiver (reply)="incomingMsg=$event" [baby]="message"></app-receiver> 
+        </div>
+    </div>
+    </div>
+</div>
+
+
