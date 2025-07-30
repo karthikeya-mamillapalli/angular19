@@ -13,10 +13,12 @@ import { SwitchComponent } from "./components/switch/switch.component";
 import { ForComponent } from "./components/for/for.component";
 import { SenderComponent } from "./components/sender/sender.component";
 import { ReceiverComponent } from "./components/receiver/receiver.component";
+import { ViewchildComponent } from "./components/viewchild/viewchild.component";
+import { TopicComponent } from "./components/topic/topic.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TestComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent, TwoWayDataBindingComponent, IfComponent, SwitchComponent, ForComponent, SenderComponent, ReceiverComponent],
+  imports: [RouterOutlet, TestComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent, TwoWayDataBindingComponent, IfComponent, SwitchComponent, ForComponent, SenderComponent, ReceiverComponent, ViewchildComponent, TopicComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

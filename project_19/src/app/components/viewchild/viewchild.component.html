@@ -1,0 +1,31 @@
+<app-topic [topic]="'All about viewchild baby'"></app-topic>
+
+<!--<div class="container">
+<mat-form-field>
+    <mat-label>Enter </mat-label>
+    <input matInput #inputValue/>
+</mat-form-field>
+<button mat-stroked-button color="warn" (click)="getValue(inputValue)">with ref button</button>
+<p>{{inputValueWithRef}}</p> -->
+
+<!--using viewchild-->
+<!-- <button mat-stroked-button color="warn" (click)="getValueViewChild()">with viewchild button</button>
+<p>{{inputValueWithView}}</p>
+</div> -->
+
+
+
+<!--using signals-->
+<div class="container">
+<mat-form-field>
+    <mat-label>Enter </mat-label>
+    <input matInput #inputValue/>
+</mat-form-field>
+<button mat-stroked-button color="warn" (click)="getValue(inputValue)">with ref button</button>
+<p>{{inputValueWithRef()}}</p> 
+
+<!--using viewchild-->
+<button mat-stroked-button color="warn" (click)="getValueViewChild()">with viewchild button</button>
+<p>{{inputValueWithView()}}</p>
+
+</div> 
