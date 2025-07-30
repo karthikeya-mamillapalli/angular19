@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component,EventEmitter,Input,Output } from '@angular/core';
+import { Component,EventEmitter,Input,Output,input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -9,7 +9,10 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './receiver.component.css'
 })
 export class ReceiverComponent {
-@Input() baby:any
+  //below is normal way 
+// @Input() baby:any
+//this is using signal
+baby= input<string>()
 @Output() reply=new EventEmitter()
 replyMessage(){
 this.reply.emit('ahh child message');
