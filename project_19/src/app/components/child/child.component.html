@@ -1,4 +1,10 @@
 <div style="border:2px solid green;padding:10px">
     <h4>im child👶component</h4>
-    <p><span style="font-weight: bold;">Message :</span>{{childMessage}}</p>
+
+    <!-- below uses normal way-->
+    <!-- <p><span style="font-weight: bold;">Message :</span>{{childMessage}}</p> -->
+
+    <!-- using signals -->
+
+    <p>recieved message from parent {{message()}}</p>
 </div>

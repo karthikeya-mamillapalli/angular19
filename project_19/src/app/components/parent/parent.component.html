@@ -1,5 +1,6 @@
 <app-topic [topic]="topicName"></app-topic>
 
+<!--
 <div class="container">
     <div style="border:2px solid blue;padding:10px">
         <h3>im parent 🧔‍♂️ component</h3>
@@ -9,5 +10,23 @@
         </button>
         <p>childs message accessed in parent : {{childComp?.childMessage}}</p>
 
+    </div>
+</div> -->
+
+
+<div class="container">
+    <div style="border:2px solid blue;padding:10px">
+        <h3>im parent 🧔‍♂️ component</h3>
+        <!-- <app-child></app-child> -->
+        <!--  we domt want this we use other method as below-->
+        <ng-template #childHost></ng-template>
+        <button mat-raised-button (click)="callChild()">
+            Call Child's Method
+        </button>
+        <p>
+            <strong>NOTE:</strong> Child is created Dynamically and receives input via
+            Signals
+        </p>
+        <p><strong>Child's Message: </strong>{{ childMessage }}</p>
     </div>
 </div>
