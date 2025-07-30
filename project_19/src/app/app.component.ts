@@ -15,10 +15,11 @@ import { SenderComponent } from "./components/sender/sender.component";
 import { ReceiverComponent } from "./components/receiver/receiver.component";
 import { ViewchildComponent } from "./components/viewchild/viewchild.component";
 import { TopicComponent } from "./components/topic/topic.component";
+import { ParentComponent } from "./components/parent/parent.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TestComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent, TwoWayDataBindingComponent, IfComponent, SwitchComponent, ForComponent, SenderComponent, ReceiverComponent, ViewchildComponent, TopicComponent],
+  imports: [RouterOutlet, TestComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent, TwoWayDataBindingComponent, IfComponent, SwitchComponent, ForComponent, SenderComponent, ReceiverComponent, ViewchildComponent, TopicComponent, ParentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
